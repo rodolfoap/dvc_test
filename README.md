@@ -22,8 +22,6 @@ So, you want to choose the parameters configuration that best suits your needs, 
 
 Following my tests, it is possible to map a **git+dvc** repository to multiple remotes, and use files in the same remote in multiple **git+dvc** repositories.
 
-#########################################################################################3
-
 ### **dvc** Shoots Itself on its own Foot, Sometimes
 
 The command `dvc run` create a stage, which is a part of the processing pipeline. Notice the following facts:
