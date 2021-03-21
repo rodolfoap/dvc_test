@@ -1,0 +1,8 @@
+#!/bin/bash
+
+X=$(grep "x:" params.yaml|cut -f2 -d' ');
+A=$(grep "a:" params.yaml|cut -f2 -d' ')
+
+# Will create A lines of text X
+yes ${X}|head -${A} > result1/dat
+#for FILE in result?/dat; do ls -l $FILE; sed 's/^/\t/' $FILE; done

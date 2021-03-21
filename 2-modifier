@@ -1,0 +1,7 @@
+#!/bin/bash
+
+N=$(grep "b:" params.yaml|cut -f2 -d' ')
+
+# Will add B times the number B
+cat result1/dat|sed "s/$/ $(yes $N|head -n $N|tr -d '\n')/" > result2/dat
+#for FILE in result?/dat; do ls -l $FILE; sed 's/^/\t/' $FILE; done

@@ -1,0 +1,21 @@
+#!/bin/bash
+b=$(cat result4/dat|tr -d ' \n'|wc -c)
+n=$(sed 's/[^0-9]//g' result4/dat|tr -d '\n'|wc -c)
+l=$(sed 's/[^0-4]//g' result4/dat|tr -d '\n'|wc -c)
+u=$(sed 's/[^5-9]//g' result4/dat|tr -d '\n'|wc -c)
+c=$(sed 's/[^a-z]//g' result4/dat|tr -d '\n'|wc -c)
+v=$(sed 's/[^aeiou]//g' result4/dat|tr -d '\n'|wc -c)
+x=$(sed 's/[aeiou]//g' result4/dat|sed 's/[^b-z]//g'|tr -d '\n'|wc -c)
+
+cat << EOF > metrics.yaml
+---
+results:
+  chars: $b
+  numbers: $n
+  lowernumbers: $l
+  highernumbers: $u
+  letters: $c
+  vowels: $v
+  consonants: $x
+EOF
+cat metrics.yaml
