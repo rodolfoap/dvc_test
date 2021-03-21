@@ -41,7 +41,7 @@ dvc run -n phase1 -p params.yaml:x,a -o result1/dat ./1-producer
 
 **THIS IS IMPORTANT**: This occurs because the file is already tracked in **dvc**. Files that are already tracked cannot be part of inputs or outputs. One might be tempted to just exclude the `-o result1/dat` from the command, which will make it run. But if we do so, we are removing the pipeline dependencies. Pipelines are so because each stage depend on others. So, do not remove the `-o result1/dat` from the command. Instead, **we need to remove the files from dvc**.
 
-This is really stupid, because, as said, **dvc performs two functions**, and this is the perfect example of the consequences: one function messing with another... within the same application. This could have been fixed intelligently by **dvc**. But since its philosophy is not the traditional Unix _KISS_, but moreover _KISSASS_ (_Keep It Stupid, Scumbag... And Sometimes, Simple_), this should be managed by the user. The solution is to...
+This is really stupid, because, as said, **dvc performs two functions**, and this is the perfect example of the consequences: one function messing with another... within the same application. This could have been fixed intelligently by **dvc**. But since its philosophy is not the traditional Unix _KISS_, but moreover _KISSASS_ (_Keep It Stupidly Stupid... And Sometimes, Simple_), this should be managed by the user. The solution is to...
 
 ```
 dvc remove result?/dat.dvc
