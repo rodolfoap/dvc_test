@@ -57,7 +57,7 @@ A simple fix for an install bug (present in Debian/Buster, on 2021/2+1/21-21:21:
 dvc exp run --set-param d=3
 	ERROR: unexpected error - [Errno 2] No such file or directory: '/usr/lib/dvc/text_unidecode/data.bin'
 
-pyp install text-unidecode
+pip install text-unidecode
 	Collecting text-unidecode
 	  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
 	     |................................| 78 kB 3.1 MB/s
