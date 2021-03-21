@@ -91,3 +91,8 @@ dvc exp show|sed s/_/_/
 # Generates something like exp-t2ns8. Use such label to make a branch out of it:
 dvc exp apply exp-t2ns8
 dvc exp push origin exp-t2ns8
+
+# Your process might generate data that can be graphically represented. For the example, see logs.csv, taken from the dvc documentation:
+dvc plots show logs.csv
+
+# That will create plots.html. Open it with your browser. There seems to be no way to save it as a graphic file. According to the doc, you can save it using the browser.
